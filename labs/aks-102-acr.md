@@ -27,7 +27,7 @@ az acr create --resource-group $RESOURCE_GROUP --name $ACR_NAME --sku Standard
 
 Clone the workshop repo
 ```sh
-$ git clone https://github.com/yokawasa/azure-container-labs.git
+$ git clone https://github.com/griffinbird/azure-container-labs.git
 ```
 
 Then, change directory to the repository

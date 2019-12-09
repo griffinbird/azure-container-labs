@@ -53,7 +53,7 @@ In this labs, you're running this workthrough on [Azure Cloud Shell Bash](https:
 ### Labs materials
 Get labs materials from Github
 ```
-git clone https://github.com/yokawasa/azure-container-labs.git
+git clone https://github.com/griffinbird/azure-container-labs.git
 cd azure-container-labs/apps/todo
 ```
 

@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: azure-voting-app-back
-        image: yoichikawasaki/azure-vote-back:1.0.0
+        image: bennyau.azurecr.io/azure-vote-back:1.0.0
         args: ["--ignore-db-dir=lost+found"]
         ports:
         - containerPort: 3306
@@ -66,7 +66,7 @@ spec:
     spec:
       containers:
       - name: azure-voting-app-front
-        image: yoichikawasaki/azure-vote-front:1.0.0
+        image: bennyau.azurecr.io/azure-vote-front:1.0.0
         resources:
           requests:
             cpu: 250m

@@ -12,12 +12,12 @@ azureVoteFront:
   service:
     name: front
     # service type: LoadBalancer or ClusterIP
-    type: ClusterIP
+    type: LoadBalancer
     externalPort: 80
   deployment:
     replicas: 2
     name: front
-    image: yoichikawasaki/azure-vote-front
+    image: bennyau.azurecr.io/azure-vote-front
     imageTag: 1.0.0
     imagePullPolicy: Always
     internalPort: 80
@@ -37,7 +37,7 @@ azureVoteBack:
   deployment:
     replicas: 1
     name: back
-    image: yoichikawasaki/azure-vote-back
+    image: bennyau.azurecr.io/azure-vote-back
     imageTag: 1.0.0
     imagePullPolicy: IfNotPresent
     internalPort: 3306

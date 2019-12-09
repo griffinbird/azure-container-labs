@@ -408,7 +408,7 @@ Reference: [az acr](https://docs.microsoft.com/en-us/cli/azure/acr?view=azure-cl
 - https://docs.microsoft.com/en-us/azure/aks/troubleshooting
 - [Kubernetes Troubleshooting @Github](https://github.com/feiskyer/kubernetes-handbook/blob/master/en/troubleshooting/index.md)
 - https://docs.microsoft.com/en-us/azure/aks/kube-advisor-tool
-- [SSH login to k8s nodes](https://github.com/yokawasa/kubectl-plugin-ssh-jump)
+- [SSH login to k8s nodes](https://github.com/griffinbird/kubectl-plugin-ssh-jump)
 
 ### SLA
 - `API Server`: Because AKS is free, no cost is available to reimburse, so AKS has no formal SLA. However, AKS seeks to maintain availability of `at least 99.5 percent` for the Kubernetes API server ( From [SLA for AKS](https://azure.microsoft.com/en-au/support/legal/sla/kubernetes-service/) )

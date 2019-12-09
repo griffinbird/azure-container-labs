@@ -28,7 +28,7 @@ az group create -n $RESOURCE_GROUP -l $REGION
 Then, create API in Azure Container Instance
 
 ```sh
-PREFIX="yoichika"
+PREFIX="begriff"
 az container create --name "${PREFIX}-api" \
   --resource-group $RESOURCE_GROUP \
   --image "danielscholl/demoapi" \

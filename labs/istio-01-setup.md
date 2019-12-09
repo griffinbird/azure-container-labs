@@ -15,7 +15,7 @@
 In this lab, we use `istio-1.1.3`. Run the following command to download `istio-1.1.3` package
 
 ```sh
-$ curl -L https://raw.githubusercontent.com/yokawasa/azure-container-labs/master/scripts/istio-helpers/get-istio | sh -
+$ curl -L https://raw.githubusercontent.com/griffinbird/azure-container-labs/master/scripts/istio-helpers/get-istio | sh -
 ```
 > [NOTE] If you want to download the latest Istio, run the following:
 > ```sh

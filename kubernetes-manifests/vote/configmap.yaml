@@ -8,6 +8,6 @@ data:
   config_file.cfg: |
     # UI Configurations
     TITLE = 'Azure Voting App'
-    VOTE1VALUE = 'Beer'
-    VOTE2VALUE = 'Wine'
+    VOTE1VALUE = 'Cats'
+    VOTE2VALUE = 'Dogs'
     SHOWHOST = 'false'

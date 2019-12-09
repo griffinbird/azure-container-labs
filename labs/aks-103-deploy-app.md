@@ -23,7 +23,7 @@ In this module, you will deploy the voting app (below) to the AKS cluster that y
 
 Clone the workshop repo
 ```sh
-$ git clone https://github.com/yokawasa/azure-container-labs.git
+$ git clone https://github.com/griffinbird/azure-container-labs.git
 ```
 
 Then, change directory to the repository
@@ -43,8 +43,8 @@ Of course, You can use a default container image (yoichikawasaki/azure-vote-fron
 
 | Type | Default image in Docker Hub | new image  registerd in ACR |
 | ------------- | ------------- | ------------- |
-| Frontend  | yoichikawasaki/azure-vote-front:1.0.0 | {acrname}.azurecr.io/azure-vote-front:1.0.0 |
-| Backend   | yoichikawasaki/azure-vote-back:1.0.0 | {acrname}.azurecr.io/azure-vote-back:1.0.0 |
+| Frontend  | wiziah/azure-vote-front:1.0.0 | {acrname}.azurecr.io/azure-vote-front:1.0.0 |
+| Backend   | wiziah/azure-vote-back:1.0.0 | {acrname}.azurecr.io/azure-vote-back:1.0.0 |
 
 Open `kubernetes-manifests/vote/deployment.yaml` and replace the container image
 
@@ -66,7 +66,7 @@ spec:
     spec:
       containers:
       - name: azure-voting-app-back
-        image: yoichikawasaki/azure-vote-back:1.0.0   <<<<< <acrname>.azurecr.io/azure-vote-back:1.0.0
+        image: wiziah/azure-vote-back:1.0.0   <<<<< <acrname>.azurecr.io/azure-vote-back:1.0.0
         args: ["--ignore-db-dir=lost+found"]
         ...
 ---
@@ -87,7 +87,7 @@ spec:
     spec:
       containers:
       - name: azure-voting-app-front
-        image: yoichikawasaki/azure-vote-front:1.0.0  <<<<<  <acrname>.azurecr.io/azure-vote-back:1.0.0
+        image: wiziah/azure-vote-front:1.0.0  <<<<<  <acrname>.azurecr.io/azure-vote-back:1.0.0
         resources:
         ...
 ```
