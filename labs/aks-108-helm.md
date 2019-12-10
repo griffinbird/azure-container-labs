@@ -258,7 +258,7 @@ NOTES:
   kubectl port-forward $POD_NAME 80:80
 ```
 
-> [NOTE] If experiencing issues with helm have a look [helm helper](helper-helm.md) and [helm cheat sheet](helm-cheatsheet,md)
+> [NOTE] If experiencing issues with helm have a look [helm helper](helper-helm.md) and [helm cheat sheet](helm-cheatsheet.md)
 
 
 Finally, you can access the app with the URL - `http://vote.<CLUSTER_SPECIFIC_DNS_ZONE>` or via the pulic loadbalancer if you have that set.
