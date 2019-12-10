@@ -163,6 +163,18 @@ $ helm lint azure-voting-app
 
 ### Install Helm chart with your parameter values
 
+If you are using Helm 3:
+```sh
+$ helm install vote azure-voting-app \
+  --set \
+azureVoteFront.service.type=loadbalancer,\
+azureVoteFront.deployment.image=<acrname>.azurecr.io/azure-vote-front,\
+azureVoteBack.deployment.image=<acrname>.azurecr.io/azure-vote-back,\
+ingress.enabled=false,\
+ingress.host=vote.<dnszone>
+
+```
+
 ```sh
 # helm install ./azure-voting-app -n <helm name> --set <key1=value1,key2=value2,...> [--debug]
 

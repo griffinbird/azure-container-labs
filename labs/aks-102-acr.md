@@ -21,6 +21,11 @@ az acr create --resource-group $RESOURCE_GROUP --name $ACR_NAME --sku Standard
 > - Resource Group: Use the existing Resource Group that you created in previous module
 > - SKU Options: `Basic`, `Standard`(default), `Premium`: The Standard registry offers the same capabilities as Basic, but with increased storage limits and image throughput. Standard registries should satisfy the needs of most production scenarios.
 
+## Attach ACR to AKS sp AKS can pull images from your ACR
+```sh
+az aks update -n $CLUSTER_NAME -g $RESOURCE_GROUP --attach-acr $ACR_NAME
+```
+
 ## Build Containers from Dockerfiles using ACR Build and host the images in ACR
 
 ### Clone the workshop repo into the cloud shell environment
@@ -71,7 +76,6 @@ CreatedTime                   ImageName         LastUpdateTime                Ma
 ----------------------------  ----------------  ----------------------------  ---------------  ---------------------  ----------
 2018-09-20T02:03:33.3498203Z  azure-vote-front  2018-09-20T02:03:33.4005353Z  1                myazconacr.azurecr.io  1
 ```
-
 
 ## Useful Links
 - https://docs.microsoft.com/en-us/azure/container-registry/container-registry-tutorial-quick-build
