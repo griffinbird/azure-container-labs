@@ -58,7 +58,7 @@ $ helm init --service-account tiller
 This will install `Tiller` service in the `kube-system` namespace. The command output would be like this:
 
 ```
-$HELM_HOME has been configured at /Users/yoichika/.helm.
+$HELM_HOME has been configured at /Users/begriff/.helm.
 
 Tiller (the Helm server-side component) has been installed into your Kubernetes Cluster.
 
@@ -101,7 +101,7 @@ azureVoteFront:
   deployment:
     replicas: 2
     name: front
-    image: yoichikawasaki/azure-vote-front
+    image: wiziah/azure-vote-front
     imageTag: 1.0.0
     imagePullPolicy: Always
     internalPort: 80
@@ -119,7 +119,7 @@ azureVoteBack:
   deployment:
     replicas: 1
     name: back
-    image: yoichikawasaki/azure-vote-back
+    image: wiziah/azure-vote-back
     imageTag: 1.0.0
     imagePullPolicy: IfNotPresent
     internalPort: 3306
@@ -138,7 +138,9 @@ ingress:
   host: vote.<CLUSTER_SPECIFIC_DNS_ZONE>
 ```
 
-Now you want to replace default container images  (`yoichikawasaki/azure-vote-front` and  `yoichikawasaki/azure-vote-back`), and default ingress host (`vote.<CLUSTER_SPECIFIC_DNS_ZONE>`) with your values. 
+By default ingress is set to false. Change this to true and updated the host line to your Azure DNS.
+
+Now you want to replace default container images  (`wiziah/azure-vote-front` and  `wiziah/azure-vote-back`), and default ingress host (`vote.<CLUSTER_SPECIFIC_DNS_ZONE>`) with your values. 
 
 You basically have 2 options - either:
 -  adding your values for each parameter in `azure-voting-app/values.yaml` and install the chart
