@@ -175,6 +175,8 @@ ingress.host=vote.<dnszone>
 
 ```
 
+If using Helm 2:
+
 ```sh
 # helm install ./azure-voting-app -n <helm name> --set <key1=value1,key2=value2,...> [--debug]
 
