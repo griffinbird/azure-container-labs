@@ -258,11 +258,16 @@ NOTES:
   kubectl port-forward $POD_NAME 80:80
 ```
 
-Finally, you can access the app with the URL - `http://vote.<CLUSTER_SPECIFIC_DNS_ZONE>`
+> [NOTE] If experiencing issues with helm have a look [helm helper](helper-helm.md) and [helm cheat sheet](helm-cheatsheet,md)
+
+
+Finally, you can access the app with the URL - `http://vote.<CLUSTER_SPECIFIC_DNS_ZONE>` or via the pulic loadbalancer if you have that set.
+
 > [NOTE] it may take over 10 minutes untill you can access the service with the URL after the Helm installation (DNS propagation may take some time)
 
 
 ![](../assets/browse-app-ingress.png)
+
 
 ---
 [Top](../README.md) | [Back](aks-107-container-insights.md) | Next (coming soon)
