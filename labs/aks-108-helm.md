@@ -96,7 +96,7 @@ azureVoteFront:
   service:
     name: front
     # service type: LoadBalancer or ClusterIP
-    type: ClusterIP
+    type: Loadbalancer
     externalPort: 80
   deployment:
     replicas: 2
